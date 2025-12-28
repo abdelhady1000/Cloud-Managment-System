@@ -10,8 +10,8 @@ def build_docker_image():
         print("Dockerfile not found!")
         return
 
-    image_name = input("Enter image name: ")
-    image_tag = input("Enter image tag: ")
+    image_name = input("Enter image name: ").lower().strip()
+    image_tag = input("Enter image tag: ").strip()
 
     build_context = os.path.dirname(dockerfile_path)
 
